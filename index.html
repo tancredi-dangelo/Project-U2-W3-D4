@@ -17,8 +17,8 @@
       }
     </style>
   </head>
-  <body class="w-100" style="min-width: 320px">
-    <header>
+  <body class="w-100 bg-light" style="min-width: 320px">
+    <header class="border-bottom border-2 border-tertiary">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"> Archive </a>
@@ -58,27 +58,42 @@
         </div>
       </nav>
     </header>
-    <main class="container-fluid d-flex flex-column">
+    <main class="container-fluid d-flex flex-column p-0">
       <section
         id="browseSection"
-        class="container-fluid d-flex flex-column align-items-center justify-content-center"
+        class="container-fluid bg-white d-flex flex-column align-items-center justify-content-center border-bottom border-3 border-tertiary py-4"
       >
         <h2 class="m-3">Browse Archive</h2>
         <div id="mainButtons">
           <button id="loadImages" class="btn btn-primary p-2 m-1">
             Load Photos
           </button>
-          <button id="loadSecondaryImages" class="btn btn-primary p-2 m-1">
+          <button id="loadSecondaryImages" class="btn btn-light p-2 m-1">
             Load Other Photos
           </button>
         </div>
+        <form class="d-flex m-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </section>
 
-      <section class="container-fluid my-4">
-        <div id="imgCatalogue" class="row g-4"></div>
+      <section class="container-fluid bg-light py-5 my-2">
+        <div id="imgCatalogue" class="row g-4 text-center"></div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
